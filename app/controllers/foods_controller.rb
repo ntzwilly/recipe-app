@@ -1,8 +1,9 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: %i[show destroy]
 
+
   def index
-    @foods = Food.all
+    @foods = current_user.foods
   end
 
   def new
@@ -10,7 +11,7 @@ class FoodsController < ApplicationController
   end
 
   def create
-    @food = Food.new(food_params)
+    @food = current_user.foods.new(food_params)
 
     respond_to do |format|
       if @food.save
