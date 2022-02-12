@@ -16,14 +16,14 @@
 .new-recipe {
   position: fixed;
   top: 90px;
-  right: 20px; 
+  right: 20px;
   z-index: 1;
 }
 
 .new-food {
   position: fixed;
   top: 70px;
-  right: 60px; 
+  right: 60px;
   z-index: 1;
 }
 
@@ -40,5 +40,5 @@
 }
 
 .margin-top {
-  margin-top: 150px
+  margin-top: 150px;
 }
