@@ -1,0 +1,17 @@
+<%= link_to "New recipe", new_recipe_path, class:"btn btn-secondary mb-3 mt-8 align-self-center btn-sm new-recipe" %>
+
+<p style="color: green"><%= notice %></p>
+
+<div class="recipes" id="recipes">
+  <% @recipes.each do |recipe| %>
+    <div class="card mb-4 h-75 p-2">
+        <%= render recipe %>
+        <% if can? :destroy, recipe %>
+          <div class="block">
+            <%= button_to 'Remove', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm mx-3 mb-2" %>
+          </div>
+		    <% end %>
+    </div>
+  <% end %>
+</div>
+
