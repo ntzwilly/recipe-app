@@ -10,7 +10,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
-  
   def edit; end
 
   def create
